@@ -1,0 +1,19 @@
+{
+  "name": "piccolino-back",
+  "version": "1.0.0",
+  "main": "example.js",
+  "scripts": {
+    "devStart": "nodemon scripts.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.5.1",
+    "moongoose": "^0.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "description": ""
+}
