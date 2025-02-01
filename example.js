@@ -1,21 +1,22 @@
-console.log("Hello!");
-
 const mongoose = require('mongoose');
 const User = require("./User");
 
 mongoose.connect("mongodb://127.0.0.1:27017/newdb");
 
-run()
-async function run() {
-  // firt way
-  const user = await User.create({ name: "Andrey", age: 39, status: "admin" });
-  user.name = "Stas";
-  await user.save();
-  // second way
-  // const user = new User ({name: "Andrey", age: 38, status: "admin"});
-  // await user.save();
-  console.log(user);
-}
+console.log("Hello!");
 
+const express = require('express');
+const app = express();
 
+// Define an endpoint
+app.get('/api/hello', (req, res) => {
+    res.status(200).json({ message: 'Hello, World!' });
 
+    const userList = [];
+    res.send(userList);
+});
+
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
